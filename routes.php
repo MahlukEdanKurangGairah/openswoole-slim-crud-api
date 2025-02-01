@@ -26,7 +26,7 @@ return function (App $app) {
 		$config = new CrudApiConfig([
 			'driver' => 'mysql',
 			'address' => getenv('MYSQL_HOST'),
-			'port' => getenv('MYSQL_PORT'),
+			'port' =>(int) getenv('MYSQL_PORT'),
 			'username' => getenv('MYSQL_USER'),
 			'password' => getenv('MYSQL_PASSWORD'),
 			'database' => getenv('MYSQL_DATABASE'),
