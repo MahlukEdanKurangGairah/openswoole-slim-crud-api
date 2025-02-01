@@ -19,4 +19,5 @@ services:
       - SERVER_ACCESS_IP=0.0.0.0
       - SERVER_ACCESS_PORT=9501
       - TZ=Asia/Jakarta
+      - NUM_PROSES=4
     network_mode: bridge
