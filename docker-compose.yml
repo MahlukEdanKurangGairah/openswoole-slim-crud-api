@@ -1,0 +1,24 @@
+services:
+  openswoole-slim-crud-api:
+    container_name: openswoole-slim-crud-api
+    working_dir: /var/www
+    build: .
+    ports:
+      - "9501:9501"
+    volumes:
+      - /mnt/hd2/data/docker_app/php-crud-api:/var/www
+    environment:
+      - DRIVER=mysql
+      - MYSQL_HOST=172.17.0.1
+      - MYSQL_PORT=3307
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=qwerty234*
+      - MYSQL_DATABASE=mylog2
+      - SERVER_PORT=9501
+      - SECRET-KEY=sekret-key-tea
+      - SERVER_ACCESS_IP=0.0.0.0
+      - SERVER_ACCESS_PORT=9501
+      - TZ=Asia/Jakarta
+      - GID=1000
+      - UID=1000
+    network_mode: bridge
