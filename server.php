@@ -100,7 +100,7 @@ $errorMiddleware->setDefaultErrorHandler($errorHandler);
 $server = new Server($host_api,$host_port,SWOOLE_PROCESS, SWOOLE_SOCK_TCP);
 //$server = new Server($host_api,$host_port);
 $server->set([
-	'worker_num' => 4, // Sesuaikan dengan jumlah CPU
+    'worker_num' =>(int) getenv('NUM_PROSES'), // Sesuaikan dengan jumlah CPU
     'daemonize' => false,
     'max_request' => 1000,
     'max_conn' => 1024,
