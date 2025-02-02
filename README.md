@@ -1,6 +1,4 @@
-run git
-
-git clone https://github.com/MahlukEdanKurangGairah/openswoole-autoapi.git
+git clone https://github.com/MahlukEdanKurangGairah/openswoole-slim-crud-api.git
 
 cd openswoole-autoapi
 
