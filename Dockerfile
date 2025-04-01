@@ -31,5 +31,5 @@ RUN chmod +x /app/run.sh
 EXPOSE ${SERVER_PORT}
 
 # Jalankan OpenSwoole HTTP server
-ENTRYPOINT ["/app/run.sh"]
-CMD ["bash","-c","/app/run.sh"]
+ENTRYPOINT ["/bin/bash"]
+CMD ["/app/run.sh"]
